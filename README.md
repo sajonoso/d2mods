@@ -19,7 +19,7 @@ Then modify the shortcut you use to start the game by adding these two parameter
 
 ## Mods
 
-**Fixed font for nusmber 5**
+**Fixed font for number 5**
 
 Updates the number 5 font so that it is easier to distinguish between 5 and 6.
 
