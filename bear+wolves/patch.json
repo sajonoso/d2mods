@@ -1,0 +1,28 @@
+{
+  "description":"Allows summoning grizzly and wolves at the same time",
+  "search": {
+    "pettype_txt": [
+      {
+        "find": "spiritwolf\t11\t1",
+        "replace": "columns",
+        "columns": [
+          { "col": 2, "val": "", "desc": "remove group limit" }
+        ]
+      },
+      {
+        "find": "fenris\t12\t1",
+        "replace": "columns",
+        "columns": [
+          { "col": 2, "val": "", "desc": "remove group limit" }
+        ]
+      },
+      {
+        "find": "grizzly\t15\t1",
+        "replace": "columns",
+        "columns": [
+          { "col": 2, "val": "", "desc": "remove group limit" }
+        ]
+      }
+    ]
+  }
+}

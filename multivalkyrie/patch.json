@@ -1,0 +1,24 @@
+{
+  "description":"Allows summoning more than one Valkyrie",
+  "search": {
+    "skills_txt": [
+      {
+        "find": "Valkyrie\t32\tama\tvalkyrie",
+        "replace": "columns",
+        "columns": [
+          { "col": 62, "val": "3", "desc": "Number of valkyries allowed - default: 1" },
+          { "col": 165, "val": "10", "desc": "reduce casting delay - default: 150" }
+        ]
+      }
+    ],
+    "pettype_txt": [
+      {
+        "find": "valkyrie\t2\t\t0",
+        "replace": "columns",
+        "columns": [
+          { "col": 11, "val": "2", "desc": "changes icon to show number of valkyries" }
+        ]
+      }
+    ]
+  }
+}

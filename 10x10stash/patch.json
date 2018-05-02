@@ -1,0 +1,34 @@
+{
+  "description": "Increases the stash size from 6x8 to 10x10",
+  "search":  {
+    "inventory_txt": [
+    {
+      "find": "Big Bank Page 1\t0\t321\t220\t442\t6\t8",
+      "replace": "columns",
+      "columns": [
+        { "col": 5, "val": "10" },
+        { "col": 6, "val": "10" },
+        { "col": 7, "val": "16" },
+        { "col": 8, "val": "302" },
+        { "col": 9, "val": "82" },
+        { "col": 10, "val": "371" }
+      ]
+    },
+    {
+      "find": "Big Bank Page2\t80\t401\t280\t502\t6\t8",
+      "replace": "columns",
+      "columns": [
+        { "col": 5, "val": "10" },
+        { "col": 6, "val": "10" },
+        { "col": 7, "val": "96" },
+        { "col": 8, "val": "382" },
+        { "col": 9, "val": "142" },
+        { "col": 10, "val": "431" }
+      ]
+    }
+    ]
+  },
+  "copy": [
+    { "source": "TradeStash.dc6", "destination": "data\\global\\ui\\panel\\TradeStash.dc6" }
+  ]
+}

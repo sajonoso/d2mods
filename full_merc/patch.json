@@ -1,0 +1,67 @@
+{
+  "description": "Allow hirelings to equip boots, belts, gloves, one ring and amulet",
+  "search":  {
+    "inventory_txt": [
+      {
+        "find": "Hireling\t-1\t-1\t-1\t-1\t0\t0",
+        "replace": "Hireling\t-1\t-1\t-1\t-1\t0\t0\t-1\t-1\t-1\t-1\t29\t29\t20\t75\t4\t116\t55\t112\t136\t191\t64\t147\t55\t83\t251\t307\t4\t116\t56\t112\t136\t191\t3\t59\t55\t56\t208\t233\t32\t58\t25\t26\t93\t118\t121\t147\t25\t26\t208\t233\t122\t148\t25\t26\t136\t191\t154\t178\t55\t24\t251\t306\t122\t178\t55\t56\t20\t75\t121\t178\t55\t57"
+      },
+      {
+        "find": "Hireling2\t-1\t-1\t-1\t-1\t-1\t-1",
+        "replace": "Hireling2\t-1\t-1\t-1\t-1\t-1\t-1\t-1\t-1\t-1\t-1\t29\t29\t100\t155\t64\t176\t55\t112\t216\t271\t124\t207\t55\t83\t331\t387\t64\t176\t56\t112\t216\t271\t63\t119\t55\t56\t288\t313\t92\t118\t25\t26\t173\t198\t181\t207\t25\t26\t288\t313\t182\t208\t25\t26\t216\t271\t214\t238\t55\t24\t331\t386\t182\t238\t55\t56\t100\t155\t181\t238\t55\t57"
+      }
+    ],
+    "itemtypes_txt": [
+      {
+        "find": "Ring\tring\tmisc\t\t0\t1\trrin\tlrin",
+        "replace": "columns",
+         "columns": [
+          {"col": 3, "val": "hlm1"}
+        ]
+      },
+      {
+        "find": "Amulet\tamul\tmisc\t\t0\t1\tneck\tneck",
+        "replace": "columns",
+         "columns": [
+          {"col": 3, "val": "hlm1"}
+        ]
+      },
+      {
+        "find": "Boots\tboot\tarmo\t\t1\t1\tfeet\tfeet",
+        "replace": "columns",
+        "columns": [
+          {"col": 3, "val": "hlm1"}
+        ]
+      },
+      {
+        "find": "Gloves\tglov\tarmo\t\t1\t1\tglov\tglov",
+        "replace": "columns",
+         "columns": [
+          {"col": 3, "val": "hlm1"}
+        ]
+      },
+      {
+        "find": "Belt\tbelt\tarmo\t\t1\t1\tbelt\tbelt",
+        "replace": "columns",
+        "columns": [
+          {"col": 3, "val": "hlm1"}
+        ]
+      },
+      {
+        "find": "Helm\thelm\tarmo\t\t1\t1\thead\thead",
+        "replace": "columns",
+        "columns": [
+          {"col": 1, "val": "hlm1"}
+        ]
+      }
+    ]
+  },
+  "add": {
+    "itemtypes_txt": [
+      "Helm New\thelm\tarmo\thlm1\t1\t1\thead\thead\t\t\t0\t0\t0\t0\t\t1\t0\t0\t0\t0\t2\t2\t3\t0\t3\t\t1\t\t0\t\t\t\t\t\t\tarmo\t0"
+    ]
+  },
+  "copy": [
+    { "source": "npcinv.dc6", "destination": "data\\global\\ui\\panel\\npcinv.dc6" }
+  ]
+}
