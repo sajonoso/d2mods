@@ -13,11 +13,12 @@ Diablo 2 LoD versions 1.12 to 1.14d (May also work with earlier patches)
 It is also advisable to remove any other enhancements or plugins as it may interfere with these mods.
 
 ## Usage
-1) (Optional) By default all mods are enabled.  To disable any mods, open up the file d2_mods.js in a text editor and comment out any not required.  Save the changes before proceeding to step 2
-2) Double click on the file d2_mods.js to generate the `data` folder.
-3) Copy the generated data folder to your Diablo 2 installation folder.
-4) Modify the shortcut you use to start the game by adding these two parameters: -direct -txt
-5) Run the game and enjoy the new features.
+1) Download this repository and unzip into a folder. Use the 'Clone or download' button above or click [here](https://github.com/sajonoso/d2mods/archive/master.zip)
+2) (Optional) By default all mods are enabled.  To disable any mods, open up the file d2_mods.js in a text editor and comment out any not required.  Save the changes before proceeding to step 2
+3) Double click on the file d2_mods.js to generate the `data` folder.
+4) Copy the generated data folder to your Diablo 2 installation folder.
+5) Modify the shortcut you use to start the game by adding these two parameters: -direct -txt
+6) Run the game and enjoy the new features.
 
 ## List of Mods
 
