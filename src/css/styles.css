@@ -1,0 +1,124 @@
+div.page {
+  background-color: black;
+  min-height: 100vh;
+  color: white;
+}
+
+div.centered {
+  text-align: center;
+}
+
+#output {
+  min-height: 100px;
+}
+
+.mod-options {
+  margin: 0 10px;
+}
+
+.mod-option {
+  border-top: 1px solid;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.mod-desc {
+  padding: 0 25px;
+  flex: 30;
+  border-left: 1px solid;
+}
+
+.col1 {
+  flex: 1;
+}
+
+.col1 > input {
+  width: 20px;
+  height: 20px;
+}
+
+.mod-screenshot {
+  width: 250px;
+}
+
+.mod-screenshot:hover {
+  cursor: pointer;
+}
+
+.mod-screenshot:active {
+  width: auto;
+}
+
+/* CSS tabs */
+.tabselector {
+  display: flex;
+  flex-wrap: wrap;
+  background: black;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.tabselector .input {
+  position: absolute;
+  opacity: 0;
+}
+
+.tabselector .label {
+  padding: 3px 3px;
+  background: black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.tabselector .label span {
+  line-height: 46px;
+}
+
+.tabselector .label:hover {
+  background: #d8d8d8;
+}
+
+.tabselector .label:active {
+  background: #ccc;
+}
+
+.tabselector .input:focus + .label {
+  /* box-shadow: inset 0px 0px 0px 3px #2aa1c0; */
+  z-index: 1;
+}
+
+.tabselector .input:checked + .label {
+  background: orange;
+  color: #000;
+  display: inline-flex;
+}
+
+.tabselector .panel {
+  display: none;
+  min-height: 0;
+  padding: 20px 30px 30px;
+  background-color: black;
+  order: 99;
+  width: 100%;
+}
+
+.tabselector .panel h4 {
+  font-size: 16px;
+}
+
+.tabselector .input:checked + .label + .panel {
+  display: block;
+}
+
+.tabselector .skill-desc {
+  margin: 0 10px;
+}
+
+
+.tabselector.skill > label > img {
+  width: 46px;
+  height: 46px;
+}

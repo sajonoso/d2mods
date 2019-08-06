@@ -1,0 +1,49 @@
+{
+  "description": "Alter the grim ward spell to summon a new barbarian sidekick",
+  "search": {
+    "skills_txt": [
+      {
+        "find": "Grim Ward\t150\tbar\tgrim ward",
+        "replace": "Grim Ward\t150\tbar\tgrim ward\t\t56\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tarmorclass\tstat('armorclass'.accr)\ttohit\tstat('tohit'.accr)\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tmaxhp\tstat('maxhp'.accr)\titem_normaldamage\tmax(stat('maxdamage'.accr),stat('secondary_maxdamage'.accr))\thpregen\t164\titem_crushingblow\t25\t\t\t\t\tact5hire1\tsidekick1\t1\tNU\tnatural resistance\t1+min(ulvl/3,19)\t\t\t\t\t\t\t\t\t27\t\t\tnecromancer_golem_cast\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1\t5\t\tnone\t\t\t\t\t\t\t\t\t\t\t\tSC\tSC\tS1\t\t\t\t\t4\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1\t20\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1\t8\t5\t0\t1\t1\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1\t\t\t\t\t\t\t\t8\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t384\t3000"
+      }
+    ],
+    "skilldesc.txt": [
+      {
+        "find": "grim ward\t3\t5",
+        "replace": "columns",
+        "columns": [
+          { "col": 33, "val": "5", "desc": "S1C1" },
+          { "col": 34, "val": "StrSkill42", "desc": "Life:" },
+          { "col": 36, "val": "stat('maxhp'.accr)/256", "desc": "Value/formula" },
+
+          { "col": 38, "val": "5", "desc": "S1C1" },
+          { "col": 39, "val": "StrSkill21", "desc": "Defense:" },
+          { "col": 41, "val": "stat('armorclass'.accr)", "desc": "Value/formula" },
+
+          { "col": 43, "val": "5", "desc": "S1C1" },
+          { "col": 44, "val": "StrSkill4", "desc": "Damage:" },
+          { "col": 46, "val": "max(stat('maxdamage'.accr),stat('secondary_maxdamage'.accr))", "desc": "Value/formula" },
+
+          { "col": 48, "val": "5", "desc": "S1C1" },
+          { "col": 49, "val": "StrSkill22", "desc": "Attack:" },
+          { "col": 51, "val": "stat('tohit'.accr)", "desc": "Value/formula" }
+        ]
+      }
+    ],
+    "monstats_txt": [
+      {
+        "find": "act3hire\t359\tact3hire",
+        "replace": "columns",
+        "columns": []
+      }
+    ]
+  },
+  "add": {
+      "pettype_txt": [
+        "sidekick1\t23\t\t0\t1\t\t1\t1\t1\tBarbarian\t1\t1\tbarbhirable_icon\t\t\t\t\t\t\t\t\t0"
+      ],
+      "cubemain_txt": [
+        "1 key + 1 boots -> Small charm (+1 grim ward)\t1\t\t\t0\t\t\t\t\t2\tkey\tboot\t\t\t\t\t\t\"cm1,mag,pre=210,suf=257\"\t1\t1\t1\toskill\t\t150\t1\t1\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0"
+      ]
+  }
+}

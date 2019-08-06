@@ -1,0 +1,71 @@
+{
+  "description": "This patch adds extra items when starting a new character",
+  "description1": "Items added to a new character are: Horadric Cube, a key and a stamina potion",
+  "search":  {
+    "CharStats_txt": [
+      {
+        "find": "Amazon\t20",
+        "replace": "columns",
+         "columns": [
+           {"col": 64, "val": "box"}, {"col": 66, "val": "1"},
+           {"col": 67, "val": "key"}, {"col": 69, "val": "1"},
+           {"col": 70, "val": "vps"}, {"col": 72, "val": "1"}
+          ]
+      },
+      {
+        "find": "Sorceress\t10",
+        "replace": "columns",
+         "columns": [
+           {"col": 64, "val": "box"}, {"col": 66, "val": "1"},
+           {"col": 67, "val": "key"}, {"col": 69, "val": "1"},
+           {"col": 61, "val": "vps"}, {"col": 63, "val": "1"}
+          ]
+      },
+      {
+        "find": "Necromancer\t15",
+        "replace": "columns",
+         "columns": [
+           {"col": 64, "val": "box"}, {"col": 66, "val": "1"},
+           {"col": 67, "val": "key"}, {"col": 69, "val": "1"},
+           {"col": 61, "val": "vps"}, {"col": 63, "val": "1"}
+          ]
+      },
+      {
+        "find": "Paladin\t25",
+        "replace": "columns",
+         "columns": [
+           {"col": 64, "val": "box"}, {"col": 66, "val": "1"},
+           {"col": 67, "val": "key"}, {"col": 69, "val": "1"},
+           {"col": 70, "val": "vps"}, {"col": 72, "val": "1"}
+          ]
+      },
+      {
+        "find": "Barbarian\t30",
+        "replace": "columns",
+         "columns": [
+           {"col": 64, "val": "box"}, {"col": 66, "val": "1"},
+           {"col": 67, "val": "key"}, {"col": 69, "val": "1"},
+           {"col": 70, "val": "vps"}, {"col": 72, "val": "1"}
+          ]
+      },
+      {
+        "find": "Druid\t15",
+        "replace": "columns",
+         "columns": [
+           {"col": 64, "val": "box"}, {"col": 66, "val": "1"},
+           {"col": 67, "val": "key"}, {"col": 69, "val": "1"},
+           {"col": 70, "val": "vps"}, {"col": 72, "val": "1"}
+          ]
+      },
+      {
+        "find": "Assassin\t20",
+        "replace": "columns",
+         "columns": [
+           {"col": 64, "val": "box"}, {"col": 66, "val": "1"},
+           {"col": 67, "val": "key"}, {"col": 69, "val": "1"},
+           {"col": 70, "val": "vps"}, {"col": 72, "val": "1"}
+          ]
+      }
+    ]
+  }
+}
