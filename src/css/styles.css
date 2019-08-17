@@ -29,6 +29,10 @@ div.centered {
   border-left: 1px solid;
 }
 
+.bad-data-warning {
+  color: #cd5c5c;
+}
+
 .col1 {
   flex: 1;
 }
