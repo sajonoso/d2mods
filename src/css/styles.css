@@ -29,7 +29,7 @@ div.centered {
   border-left: 1px solid;
 }
 
-.bad-data-warning {
+.no-js-warning, .bad-data-warning {
   color: #cd5c5c;
 }
 
