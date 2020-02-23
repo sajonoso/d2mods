@@ -8,7 +8,7 @@ var modder = {
       return { maxValk: maxValk }
     }
 
-    if (modId === 'summon_barb') {
+    if (modId === 'side_kick') {
       const summonSkill = document.querySelector('input[name=sidekick_skill]:checked').value
       const summonType = document.querySelector('input[name=sidekick_type]:checked').value
       return { summonSkill: summonSkill, summonType: summonType }
@@ -31,10 +31,31 @@ var modder = {
     return enabled_patches;
   },
 
-  getModSearchVariation_summonBarb: function (mod, searchOperation) {
+  summonBarb_add_CharStats_skill: function(mod, searchOperation) {
+    var customSkill = 'Grim Ward'
+    switch (mod.options.summonSkill) {
+      case 'findpotion':
+        customSkill = 'Find Potion'; break;
+      case 'sacrifice':
+        customSkill = 'Sacrifice'; break;
+    }
+
+    for (var i in searchOperation) {
+      searchOperation[i].columns[0].val = customSkill;
+    }
+
+    return searchOperation;
+  },
+
+  getModSearchVariation_summonBarb: function (mod, searchOperation, file_name) {
     // for default options don't modify search operations
     if (mod.options.summonSkill === 'grimward' &&
       mod.options.summonType === 'barb') return searchOperation
+
+    // Change Charstat.txt skill
+    if ('CharStats_txt' === file_name) {
+      return modder.summonBarb_add_CharStats_skill(mod, searchOperation)
+    }
 
     var SKILLS_TXT_LINE = 'Grim Ward\t150\tbar\tgrim ward'
     if (searchOperation[0].find === SKILLS_TXT_LINE) {
@@ -127,7 +148,7 @@ var modder = {
       }
     }
 
-    // Note must be first add operation in summon_barb.json file for cubemain.txt
+    // Note must be first add operation in side_kick.json file for cubemain.txt
     var CUBEMAIN_TXT_LINE = "1 key + 1 boots -> Small charm (+1 grim ward)"
     if (addOperation[0] && addOperation[0].indexOf(CUBEMAIN_TXT_LINE) >= 0) {
       var columns = addOperation[0].split('\t')
@@ -150,22 +171,22 @@ var modder = {
     return addOperation
   },
 
-  getModSearchVariation: function (mod, searchOperation) {
+  getModSearchVariation: function (mod, searchOperation, file_name) {
     if (mod.name === 'multivalkyrie') {
       if (searchOperation[0].find === 'Valkyrie\t32\tama\tvalkyrie') {
         searchOperation[0].columns[0].val = mod.options.maxValk;
       };
     };
 
-    if (mod.name === 'summon_barb') {
-      return modder.getModSearchVariation_summonBarb(mod, searchOperation)
+    if (mod.name === 'side_kick') {
+      return modder.getModSearchVariation_summonBarb(mod, searchOperation, file_name)
     }
 
     return searchOperation;
   },
 
   getModAddVariation: function (mod, addOperation) {
-    if (mod.name === 'summon_barb') {
+    if (mod.name === 'side_kick') {
       return modder.getModAddVariation_summonBarb(mod, addOperation)
     }
 
@@ -187,7 +208,7 @@ var modder = {
         var searchOperations = patch.search[file_keys];
 
         var newSearchOperations = (Object.keys(mod.options)).length === 0 ? searchOperations :
-          modder.getModSearchVariation(mod, searchOperations)
+          modder.getModSearchVariation(mod, searchOperations, file_keys)
 
         L_MODIFY_FILES[file_keys]['search'] = currentValues.concat(newSearchOperations);
       }
