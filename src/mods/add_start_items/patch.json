@@ -2,7 +2,7 @@
   "description": "This patch adds extra items when starting a new character",
   "description1": "Items added to a new character are: Horadric Cube, a key and a stamina potion",
   "search":  {
-    "CharStats_txt": [
+    "charstats.txt": [
       {
         "find": "Amazon\t20",
         "replace": "columns",

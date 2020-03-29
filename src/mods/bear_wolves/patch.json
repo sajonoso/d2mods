@@ -1,7 +1,7 @@
 {
   "description":"Allows summoning grizzly and wolves at the same time",
   "search": {
-    "pettype_txt": [
+    "pettype.txt": [
       {
         "find": "spiritwolf\t11\t1",
         "replace": "columns",

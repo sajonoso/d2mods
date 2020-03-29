@@ -1,7 +1,7 @@
 {
   "description":"Allows summoning more than one Valkyrie",
   "search": {
-    "skills_txt": [
+    "skills.txt": [
       {
         "find": "Valkyrie\t32\tama\tvalkyrie",
         "replace": "columns",
@@ -11,7 +11,7 @@
         ]
       }
     ],
-    "pettype_txt": [
+    "pettype.txt": [
       {
         "find": "valkyrie\t2\t\t0",
         "replace": "columns",
@@ -22,7 +22,7 @@
     ]
   },
   "add": {
-      "cubemain_txt": [
+      "cubemain.txt": [
         "1 charm + 1 spear -> same charm (+5 valkyrie)\t1\t\t\t0\t\t\t\t\t2\tchar\tspea\t\t\t\t\t\tuseitem,rch,qty=255\t\t\t\tcharged\t\t32\t255\t5\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0"
       ]
   }

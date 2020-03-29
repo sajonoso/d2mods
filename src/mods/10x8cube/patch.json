@@ -1,7 +1,7 @@
 {
   "description": "Increases the Horadric cube size from 3x4 to 10x8",
   "search": {
-    "inventory_txt": [
+    "inventory.txt": [
       {
         "find": "Transmogrify Box Page 1\t0\t321\t220",
         "replace": "columns",
@@ -29,6 +29,6 @@
     ]
   },
   "copy": [
-    { "source": "supertransmogrifier.dc6", "destination": "data\\global\\ui\\panel\\supertransmogrifier.dc6" }
+    { "source": "supertransmogrifier.dc6", "destination": "data/global/ui/panel/supertransmogrifier.dc6" }
   ]
 }

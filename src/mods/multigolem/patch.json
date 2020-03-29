@@ -1,13 +1,13 @@
 {
   "description":"Allows summoning more than one golem at a time",
   "search":  {
-    "pettype_txt": [
+    "pettype.txt": [
       {
         "find": "golem\t3\t\t0\t1\t\t1\t1\t1\tStrUI0",
         "replace": "irongolem\t3\t\t0\t1\t\t1\t1\t1\tStrUI0\t1\t3\tmetalgolumicon\t291\tmetalgolumicon\t\t\t\t\t\t\t0"
       }
     ],
-    "skills_txt": [
+    "skills.txt": [
       {
         "find": "Clay Golem\t75\tnec\tclay golem",
         "replace": "columns",
@@ -39,7 +39,7 @@
     ]
   },
   "add": {
-    "pettype_txt": [
+    "pettype.txt": [
       "claygolem\t20\t\t0\t1\t\t1\t1\t1\tStrUI0\t1\t3\tearthgolumicon\t289\tearthgolumicon\t\t\t\t\t\t\t0",
       "bloodgolem\t21\t\t0\t1\t\t1\t1\t1\tStrUI0\t1\t3\tbloodgolumicon\t290\tbloodgolumicon\t\t\t\t\t\t\t0",
       "firegolem\t22\t\t0\t1\t\t1\t1\t1\tStrUI0\t1\t3\tfiregolumicon\t292\tfiregolumicon\t\t\t\t\t\t\t0"

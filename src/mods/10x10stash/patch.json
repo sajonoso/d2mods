@@ -1,7 +1,7 @@
 {
   "description": "Increases the stash size from 6x8 to 10x10",
   "search":  {
-    "inventory_txt": [
+    "inventory.txt": [
     {
       "find": "Big Bank Page 1\t0\t321\t220\t442\t6\t8",
       "replace": "columns",
@@ -29,6 +29,6 @@
     ]
   },
   "copy": [
-    { "source": "TradeStash.dc6", "destination": "data\\global\\ui\\panel\\TradeStash.dc6" }
+    { "source": "tradestash.dc6", "destination": "data/global/ui/panel/TradeStash.dc6" }
   ]
 }

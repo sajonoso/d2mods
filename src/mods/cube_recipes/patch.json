@@ -18,7 +18,7 @@
     "1 key + 1 thawing potion -> Small charm (+1 corpse explosion)\t1\t\t\t0\t\t\t\t\t2\tkey\twms\t\t\t\t\t\tcm1,mag,pre=210,suf=257,rch,qty=250\t1\t1\t1\tcharged\t\t74\t250\t1\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0"
   ],
   "add": {
-    "cubemain_txt": [
+    "cubemain.txt": [
       "1 boots + 1 stamina potion -> same boots +50% walk/run speed\t1\t\t\t0\t\t\t\t\t2\tboot\tvps\t\t\t\t\t\tuseitem\t\t\t\tmove1\t\t\t50\t50\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0",
       "1 key + 1 stamina potion -> 3 x magic dagger (chain lightning, amplify damage)\t1\t\t\t0\t\t\t\t\t2\tkey\tvps\t\t\t\t\t\tdgr,mag\t\t\t\tatt-skill\t\t53\t35\t2\tatt-skill\t\t66\t10\t3\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tdgr,mag\t\t\t\tatt-skill\t\t53\t35\t2\tatt-skill\t\t66\t10\t3\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tdgr,mag\t\t\t\tatt-skill\t\t53\t35\t2\tatt-skill\t\t66\t10\t3\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0",
       "1 key + 1 thawing potion -> small charm\t1\t\t\t0\t\t\t\t\t2\tkey\twms\t\t\t\t\t\tcm1,mag,pre=210\t1\t1\t1\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0",

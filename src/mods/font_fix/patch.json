@@ -1,6 +1,6 @@
 {
   "description":"Fixes the display of the digit 5",
   "copy": [
-    { "source": "font16.dc6", "destination": "data\\local\\font\\latin\\font16.dc6" }
+    { "source": "font16.dc6", "destination": "data/local/font/latin/font16.dc6" }
   ]
 }

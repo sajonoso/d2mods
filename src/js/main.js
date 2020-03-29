@@ -12,16 +12,12 @@ function filedownload_click() {
   const sourceFiles = DATA_UNZIPPED
   const EnabledMods = modder.getOptions()
 
-  const FileOps = modder.loadMods(EnabledMods, sourceFiles)
-
   var targetZip = new JSZip();
 
   // add file listing options selected
   targetZip.file('data/modoptions.txt', JSON.stringify(EnabledMods, null, 2))
 
-  modder.copyFiles(sourceFiles, targetZip, FileOps.copy_files)
-
-  modder.applyUpdates(sourceFiles, targetZip, FileOps.modify_files)
+  modder.ApplyMods(EnabledMods, sourceFiles, targetZip)
 
   targetZip.generateAsync({ type: "blob", compression: "DEFLATE", compressionOptions: { level: 5 } })
     .then(function (blob) {
@@ -40,9 +36,11 @@ function GetAllZipfiles(zip, ZipfileList) {
   var Promise = JSZip.external.Promise;
 
   const unzipList = ZipfileList.map(function (item) {
+    const extension3 = item.substr(-3).toLowerCase()
     const extension4 = item.substr(-4).toLowerCase()
     const extension5 = item.substr(-5).toLowerCase()
-    const contentType = (extension4 === ".txt" || extension5 === ".json") ? 'string' : 'uint8array'
+    const contentType = (extension3 === '.js' || extension4 === ".txt" || extension5 === ".json") ? 
+      'string' : 'uint8array'
     return zip.file(item).async(contentType).then(function (data) {
       return { file: item, content: data }
     })

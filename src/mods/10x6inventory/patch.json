@@ -1,7 +1,7 @@
 {
   "description": "Increases the inventory size from 10x4 to 10x6",
   "search": {
-    "inventory_txt": [
+    "inventory.txt": [
       {
         "find": "Amazon\t320\t640\t0",
         "replace": "columns",
@@ -299,6 +299,6 @@
     ]
   },
   "copy": [
-    { "source": "invchar6.dc6", "destination": "data\\global\\ui\\panel\\invchar6.dc6" }
+    { "source": "invchar6.dc6", "destination": "data/global/ui/panel/invchar6.dc6" }
   ]
 }
