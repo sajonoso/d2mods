@@ -9,10 +9,20 @@ var modder = {
 
     if (modId === "side_kick") {
       const summonSkill = document.querySelector(
-        "input[name=sidekick_skill]:checked"
+        "#side_kick input[name=sidekick_skill]:checked"
       ).value;
       const summonType = document.querySelector(
-        "input[name=sidekick_type]:checked"
+        "#side_kick input[name=sidekick_type]:checked"
+      ).value;
+      return { summonSkill: summonSkill, summonType: summonType };
+    }
+
+    if (modId === "side_kick2") {
+      const summonSkill = document.querySelector(
+        "#side_kick2 input[name=sidekick2_skill]:checked"
+      ).value;
+      const summonType = document.querySelector(
+        "#side_kick2 input[name=sidekick2_type]:checked"
       ).value;
       return { summonSkill: summonSkill, summonType: summonType };
     }
