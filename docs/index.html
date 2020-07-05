@@ -246,8 +246,8 @@ div.centered {
             <select id="multivalkyrie_limit">
               <option value="2" selected>2</option>
               <option value="4">4</option>
-              <option value="5">8</option>
-              <option value="6">16</option>
+              <option value="8">8</option>
+              <option value="16">16</option>
             </select>
 
             <br />A new cube recipe will be added so you can access this skill if you are not an Amazon
@@ -256,6 +256,17 @@ div.centered {
             <li>1 charm + 1 spear -> same charm (+5 valkyrie)</li>
           </ul>
 <img id="42110d4642ad9aaac8151352813ab9493351490a"  class="mod-screenshot" src="images/multi_valkyrie.jpg">
+        </div>
+      </div>
+
+      <div class="mod-option" id="melee_ironwolf">
+        <div class="col1">
+          <input type="checkbox" checked='true' />
+        </div>
+        <div class="mod-desc">
+          <p>
+            Turns iron wolf type hireling or summoned side kick into a melee fighter
+          </p>
         </div>
       </div>
 
@@ -314,7 +325,7 @@ div.centered {
           </p>
           <!-- Purely CSS tabs -->
           <div class="tabselector type">
-            <input name="sidekick_type" type="radio" id="tabtype-1" class="input" checked="checked" value="barb" />
+            <input name="sidekick_type" type="radio" id="tabtype-1" class="input" value="barb" />
             <label for="tabtype-1" class="label">
 <img id="5b2021cb08c37a1629ee6ed99fa1f21cdc165983"  src="images/icon_barb.jpg">
             </label>
@@ -340,7 +351,7 @@ div.centered {
               </ul>
             </div>
 
-            <input name="sidekick_type" type="radio" id="tabtype-3" class="input" value="rogue" />
+            <input name="sidekick_type" type="radio" id="tabtype-3" class="input" value="rogue" checked="checked" />
             <label for="tabtype-3" class="label">
 <img id="aef433bbb673ad5d5474eb0cbcec88a331395912"  src="images/icon_rogue.jpg">
             </label>
@@ -354,6 +365,120 @@ div.centered {
             </div>
 
             <input name="sidekick_type" type="radio" id="tabtype-4" class="input" value="mage" />
+            <label for="tabtype-4" class="label">
+<img id="06507468f5dfc5b5d5da64ba7477651c4182def3"  src="images/icon_mage.jpg">
+            </label>
+            <div class="panel">
+              <h4>Mage features</h4>
+              <ul>
+                <li>50% faster block rate</li>
+                <li>Randomly casts amplify damage</li>
+                <li style="visibility:hidden"></li>
+                <!-- <li>Cold enchanted: +cold damage, +50% cold resistance, and releases a Frost Nova upon death</li> -->
+              </ul>
+            </div>
+
+          </div>
+          <!-- Purely CSS tabs -->
+        </div>
+      </div>
+
+      <!-- SECOND SIDE KICK -->
+      <div class="mod-option" id="side_kick2">
+        <div class="col1">
+          <input type="checkbox" checked='true' />
+        </div>
+        <div class="mod-desc">
+          <p>Replaces an existing skill to summon an extra sidekick for your hero.
+            <br />Like the iron golem, you will need to choose a metal item to summon your sidekick.
+            <br />Your side kick will inherit the properties of the item.
+            <br />Unlike the iron golem, your sidekick will be lost when you exit the game
+            <br />(TIP: do not use expensive items when creating your sidekick)
+            <br />In addition, the sidekick will have the following properties: (where clvl = your character level)</p>
+          <ul>
+            <li><b>Life:</b> Same as character</li>
+            <li><b>Defense:</b> increases with character defense level</li>
+            <li><b>Attack Rating:</b> increases with character attack rating</li>
+            <li><b>Item normal damage:</b> Maximum damage of non missile weapon currently used</li>
+            <li><b>Crushing blow:</b> 25% chance</li>
+            <li><b>Natural Resistance:</b> level = 1+(clvl/3) &nbsp; &nbsp; (max level 20)</li>
+          </ul>
+
+          <p>
+            <b>Choose the skill to replace</b>
+          </p>
+          <div class="tabselector skill">
+            <input name="sidekick2_skill" type="radio" id="tabskill-1" class="input" value="findpotion" />
+            <label for="tabskill-1" class="label">
+<img id="cd958cb2115f29532d40c64ab0846fa8cffc18a3"  src="images/skill_findpotion.jpg">
+            </label>
+            <div class="skill-desc"> Find Potion
+              <br /> (Barbarian skill)
+            </div>
+
+            <input name="sidekick2_skill" type="radio" id="tabskill-2" class="input" value="grimward" checked="checked" />
+            <label for="tabskill-2" class="label">
+<img id="9fd28bc91f943533cdfab70807fded9d10ad221b"  src="images/skill_grimward.jpg">
+            </label>
+            <div class="skill-desc"> Grim Ward
+              <br /> (Barbarian skill)
+            </div>
+
+            <input name="sidekick2_skill" type="radio" id="tabskill-3" class="input" value="sacrifice" />
+            <label for="tabskill-3" class="label">
+<img id="fb0c9c0e0978eee68ad0fbbfcd1a3da668b67a53"  src="images/skill_sacrifice.jpg">
+            </label>
+            <div class="skill-desc"> Sacrifice
+              <br /> (Paladin skill)
+            </div>
+          </div>
+
+
+          <p>
+            <b>Choose your side kick</b>
+          </p>
+          <!-- Purely CSS tabs -->
+          <div class="tabselector type">
+            <input name="sidekick2_type" type="radio" id="tabtype-1" class="input" value="barb" />
+            <label for="tabtype-1" class="label">
+<img id="5b2021cb08c37a1629ee6ed99fa1f21cdc165983"  src="images/icon_barb.jpg">
+            </label>
+            <div class="panel">
+              <h4>Barbarian features</h4>
+              <ul>
+                <li>Adds elemental damage to attacks (Spectral hit)</li>
+                <li style="visibility:hidden"></li>
+                <li style="visibility:hidden"></li>
+              </ul>
+            </div>
+
+            <input name="sidekick2_type" type="radio" id="tabtype-2" class="input" value="guard" />
+            <label for="tabtype-2" class="label">
+<img id="6819b563a3da8c3c3b2524331e2b8d0d8f432752"  src="images/icon_guard.jpg">
+            </label>
+            <div class="panel">
+              <h4>Guard features</h4>
+              <ul>
+                <li>Level 1 Sanctuary Aura</li>
+                <li style="visibility:hidden"></li>
+                <li style="visibility:hidden"></li>
+              </ul>
+            </div>
+
+            <input name="sidekick2_type" type="radio" id="tabtype-3" class="input" value="rogue" />
+            <label for="tabtype-3" class="label">
+<img id="aef433bbb673ad5d5474eb0cbcec88a331395912"  src="images/icon_rogue.jpg">
+            </label>
+            <div class="panel">
+              <h4>Rogue features</h4>
+              <ul>
+                <li>Shoots multiple arrows (Multishot)</li>
+                <li>Level 5 Pierce</li>
+                <li style="visibility:hidden"></li>
+              </ul>
+            </div>
+
+            <input name="sidekick2_type" type="radio" id="tabtype-4" class="input" value="mage" checked="checked" />
             <label for="tabtype-4" class="label">
 <img id="06507468f5dfc5b5d5da64ba7477651c4182def3"  src="images/icon_mage.jpg">
             </label>

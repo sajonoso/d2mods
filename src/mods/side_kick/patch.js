@@ -56,6 +56,14 @@ var mod_side_kick = {
   },
 
   update_skilldesc_txt: function(mod, targetFiles) {
+    let SummonTypeName = ''
+    switch (mod.options.summonType) {
+      case 'rogue': SummonTypeName = "RogueScout";  break;
+      case 'guard': SummonTypeName = "Guard";  break;
+      case 'mage': SummonTypeName = "Mage";  break;
+      case 'barb': SummonTypeName = "Barbarian";  break;
+    }
+
     var skilldesc_txt_op = {
       "find": "grim ward\t3\t5",
       "replace": "columns",
@@ -74,7 +82,11 @@ var mod_side_kick = {
   
         { "col": 48, "val": "5", "desc": "S1C1" },
         { "col": 49, "val": "StrSkill22", "desc": "Attack:" },
-        { "col": 51, "val": "stat('tohit'.accr)", "desc": "Value/formula" }
+        { "col": 51, "val": "stat('tohit'.accr)", "desc": "Value/formula" },
+
+        { "col": 53, "val": "18", "desc": "S1" },
+        { "col": 54, "val": SummonTypeName, "desc": "SummonType" },
+        //{ "col": 56, "val": "1", "desc": "1" }
       ]
     }
 
