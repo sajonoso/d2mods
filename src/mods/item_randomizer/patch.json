@@ -1,0 +1,12 @@
+{
+  "description": "This patch adds extra Horadric Cube recipes. Converts items to rare versions with random attributes and duplicates most items",
+  "add": {
+    "cubemain.txt": [
+      "1 weapon + 1 identify Scroll -> rare weapon of same type\t1\t\t\t0\t\t\t\t\t3\tweap\tisc\twms\t\t\t\t\t\"usetype,rar\"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0",
+      "1 armour + 1 identify Scroll -> rare armour of same type\t1\t\t\t0\t\t\t\t\t3\tarmo\tisc\twms\t\t\t\t\t\"usetype,rar\"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0",
+      "1 weapon + 2 health potions -> duplicate item\t1\t\t\t0\t\t\t\t\t3\tweap\t\"hpot,qty=2\"\t\t\t\t\t\tuseitem\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tuseitem\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0",
+      "1 armour + 2 health potions -> duplicate item\t1\t\t\t0\t\t\t\t\t3\tarmo\t\"hpot,qty=2\"\t\t\t\t\t\tuseitem\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tuseitem\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0",
+      "1 charm + 2 health potions -> duplicate item\t1\t\t\t0\t\t\t\t\t3\tchar\t\"hpot,qty=2\"\t\t\t\t\t\tuseitem\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tuseitem\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0"
+    ]
+  }
+}
