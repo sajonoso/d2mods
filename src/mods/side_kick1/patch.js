@@ -1,8 +1,8 @@
-var mod_side_kick2 = {
-  SK_TYPE: "sidekick2", // also update patch.json to match type
-  SK_OFFSET: 1, // offset when there is more than one side kick
-  SK_MAX_NUMBER: 2, // maximum number of side kicks allowed for this type
-  SK_NEED_ITEM: false, // determines if need an item to summon this side kick
+var mod_side_kick1 = {
+  SK_TYPE: "sidekick1", // also update patch.json to match type
+  SK_OFFSET: 0, // offset when there is more than one side kick
+  SK_MAX_NUMBER: 1, // maximum number of side kicks allowed for this type
+  SK_NEED_ITEM: true, // determines if need an item to summon this side kick
   SK_LIFE: "stat('maxhp'.accr)*2",
   SK_DAMAGE: "max(stat('maxdamage'.accr),stat('secondary_maxdamage'.accr))",
   SK_DEFENSE: "stat('armorclass'.accr)",
@@ -19,8 +19,8 @@ var mod_side_kick2 = {
 
     var skills_txt_op = {
       "find": "Grim Ward\t150\tbar\tgrim ward",
-      "replace": "Grim Ward\t150\tbar\tgrim ward\t\t57\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tarmorclass\t" + mod_side_kick2.SK_DEFENSE + "\ttohit\t" + 
-      mod_side_kick2.SK_ATTACK + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tmaxhp\t" + mod_side_kick2.SK_LIFE + "\titem_normaldamage\t" + mod_side_kick2.SK_DAMAGE + "\thpregen\t164\titem_crushingblow\t25\t\t\t\t\tact5hire1\t" + mod_side_kick2.SK_TYPE + "\t" + 
+      "replace": "Grim Ward\t150\tbar\tgrim ward\t\t57\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tarmorclass\t" + mod_side_kick1.SK_DEFENSE + "\ttohit\t" + 
+      mod_side_kick1.SK_ATTACK + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tmaxhp\t" + mod_side_kick1.SK_LIFE + "\titem_normaldamage\t" + mod_side_kick1.SK_DAMAGE + "\thpregen\t164\titem_crushingblow\t25\t\t\t\t\tact5hire1\t" + mod_side_kick1.SK_TYPE + "\t" + 
       "1\tNU\t\t\t\t\t\t\t\t\t\t\t27\t\t\tnecromancer_golem_cast\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1\t5\t\tnone\t\t\t\t\t\t\t\t\t\t\t\tSC\tSC\tS1\t\t\t\t\t4\t\t\t\t\t\t\t\t\t1\t\t\t\t\t\t\t\t\t\t\t\t1\t20\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1\t8\t5\t0\t1\t1\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1\t\t\t\t\t\t\t\t8\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t384\t3000"
     }
 
@@ -43,9 +43,9 @@ var mod_side_kick2 = {
     var columns = skills_txt_op.replace.split('\t')
 
     // change common options
-    columns[col('petmax')] = '' + mod_side_kick2.SK_MAX_NUMBER;
-    columns[col('srvdofunc')] = mod_side_kick2.SK_NEED_ITEM ? '57' : '56' // AI type 56 = golem, 57 = iron golem
-    columns[col('TargetItem')] = mod_side_kick2.SK_NEED_ITEM ? '1' : '' // TargetItem 1 or blank
+    columns[col('petmax')] = '' + mod_side_kick1.SK_MAX_NUMBER;
+    columns[col('srvdofunc')] = mod_side_kick1.SK_NEED_ITEM ? '57' : '56' // AI type 56 = golem, 57 = iron golem
+    columns[col('TargetItem')] = mod_side_kick1.SK_NEED_ITEM ? '1' : '' // TargetItem 1 or blank
 
     // passive stat 1-5
     columns[col('passivestat4')] = 'item_crushingblow'
@@ -126,19 +126,19 @@ var mod_side_kick2 = {
       "columns": [
         { "col": 33, "val": "5", "desc": "S1C1" },
         { "col": 34, "val": "StrSkill42", "desc": "Life:" },
-        { "col": 36, "val": mod_side_kick2.SK_LIFE + "/256", "desc": "Value/formula" },
+        { "col": 36, "val": mod_side_kick1.SK_LIFE + "/256", "desc": "Value/formula" },
   
         { "col": 38, "val": "5", "desc": "S1C1" },
         { "col": 39, "val": "StrSkill21", "desc": "Defense:" },
-        { "col": 41, "val": mod_side_kick2.SK_DEFENSE, "desc": "Value/formula" },
+        { "col": 41, "val": mod_side_kick1.SK_DEFENSE, "desc": "Value/formula" },
   
         { "col": 43, "val": "5", "desc": "S1C1" },
         { "col": 44, "val": "StrSkill4", "desc": "Damage:" },
-        { "col": 46, "val": mod_side_kick2.SK_DAMAGE, "desc": "Value/formula" },
+        { "col": 46, "val": mod_side_kick1.SK_DAMAGE, "desc": "Value/formula" },
   
         { "col": 48, "val": "5", "desc": "S1C1" },
         { "col": 49, "val": "StrSkill22", "desc": "Attack:" },
-        { "col": 51, "val": mod_side_kick2.SK_ATTACK, "desc": "Value/formula" },
+        { "col": 51, "val": mod_side_kick1.SK_ATTACK, "desc": "Value/formula" },
 
         { "col": 53, "val": "18", "desc": "S1" },
         { "col": 54, "val": SummonTypeName, "desc": "SummonType" },
@@ -169,7 +169,7 @@ var mod_side_kick2 = {
 
   update_pettype_txt: function(mod, targetFiles) {
     var pettype_txt_op = {
-      "find": mod_side_kick2.SK_TYPE + "\t" + (23 + mod_side_kick2.SK_OFFSET) + "\t",
+      "find": mod_side_kick1.SK_TYPE + "\t" + (23 + mod_side_kick1.SK_OFFSET) + "\t",
       "replace": "columns",
       "columns": [
         { "col": 9, "val": "Barbarian", "desc": "Text under icon" },
@@ -202,7 +202,7 @@ var mod_side_kick2 = {
     }
 
     // show number of pets if allowing more than one sidekick of this type
-    if (mod_side_kick2.SK_MAX_NUMBER > 1) {
+    if (mod_side_kick1.SK_MAX_NUMBER > 1) {
       pettype_txt_op.columns[2] = { "col": 11, "val": "2", "desc": "changes icon to show number of side kicks" }
     }
 
@@ -230,7 +230,7 @@ var mod_side_kick2 = {
 
     const paladinAddSkill = (mod.options.summonSkill === 'sacrifice') ? '' : addSkill;
 
-    const skillOffset = mod_side_kick2.SK_OFFSET;
+    const skillOffset = mod_side_kick1.SK_OFFSET;
   
     const charstats_txt_ops = [
       {
@@ -298,8 +298,8 @@ var mod_side_kick2 = {
 }
 
 modder.currentPatch = function applyPatch(mod, targetFiles) {
-  mod_side_kick2.update_skills_txt(mod, targetFiles)
-  mod_side_kick2.update_skilldesc_txt(mod, targetFiles)
-  mod_side_kick2.update_pettype_txt(mod, targetFiles)
-  mod_side_kick2.update_charstats_txt(mod, targetFiles)
+  mod_side_kick1.update_skills_txt(mod, targetFiles)
+  mod_side_kick1.update_skilldesc_txt(mod, targetFiles)
+  mod_side_kick1.update_pettype_txt(mod, targetFiles)
+  mod_side_kick1.update_charstats_txt(mod, targetFiles)
 }

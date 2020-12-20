@@ -7,12 +7,12 @@ var modder = {
       return { maxValk: maxValk };
     }
 
-    if (modId === "side_kick") {
+    if (modId === "side_kick1") {
       const summonSkill = document.querySelector(
-        "#side_kick input[name=sidekick_skill]:checked"
+        "#side_kick1 input[name=sidekick1_skill]:checked"
       ).value;
       const summonType = document.querySelector(
-        "#side_kick input[name=sidekick_type]:checked"
+        "#side_kick1 input[name=sidekick1_type]:checked"
       ).value;
       return { summonSkill: summonSkill, summonType: summonType };
     }
