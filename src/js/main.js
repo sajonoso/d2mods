@@ -39,7 +39,7 @@ function GetAllZipfiles(zip, ZipfileList) {
     const extension3 = item.substr(-3).toLowerCase()
     const extension4 = item.substr(-4).toLowerCase()
     const extension5 = item.substr(-5).toLowerCase()
-    const contentType = (extension3 === '.js' || extension4 === ".txt" || extension5 === ".json") ? 
+    const contentType = (extension3 === '.js' || extension4 === ".txt" || extension5 === ".json") ?
       'string' : 'uint8array'
     return zip.file(item).async(contentType).then(function (data) {
       return { file: item, content: data }
