@@ -224,7 +224,7 @@ function CompressFolder(fileList, nextFunction) {
   zip.generateAsync(zipOptions)
     .then(function (base64Zip) {
       const fdOut = fs.openSync(OUTPUT_FILE + '.js', 'w');
-      fs.writeSync(fdOut, 'const DATA_ZIP="' + base64Zip + '";');
+      fs.writeSync(fdOut, 'DATA_ZIP="' + base64Zip + '";');
       fs.closeSync(fdOut);
 
       nextFunction();

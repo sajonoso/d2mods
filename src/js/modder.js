@@ -1,6 +1,6 @@
 // Library to apply mods to source text files
 
-var modder = {
+modder = {
   getModOptions: function (modId) {
     if (modId === "multivalkyrie") {
       const maxValk = ID("multivalkyrie_limit").value;
@@ -146,8 +146,6 @@ var modder = {
     enabled_mods.forEach(function (mod) {
       modder.loadAndApplyMod(mod, sourceFiles, targetFiles);
     });
-
-    window.TARGET_FILES = targetFiles;
 
     // compress target files
     for (filename in targetFiles) {
