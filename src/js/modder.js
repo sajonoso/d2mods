@@ -62,6 +62,22 @@ modder = {
     }
   },
 
+  // get the maximum value of a column
+  get_max_column: function (lines, columnNames, column) {
+    var INDEX_ID = columnNames.indexOf(column);
+
+    var maxID = 0;
+    for (var index in lines) {
+      if (index > 0) {
+        fields = lines[index].split('\t')
+        var lineID = parseInt(fields[INDEX_ID])
+        if (lineID > maxID) maxID = lineID
+      };
+    }
+
+    return maxID;
+  },
+
   replaceColumns: function (originalLine, replaceArray) {
     var fields = originalLine.split('\t');
     var entry = null;

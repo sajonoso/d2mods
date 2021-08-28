@@ -114,11 +114,28 @@
 
       <div class="mod-option" id="melee_ironwolf">
         <div class="col1">
-          <input type="checkbox" checked='true' />
+          <input type="checkbox" /> <!-- checked='true' -->
         </div>
         <div class="mod-desc">
           <p>
             Turns iron wolf type hireling or summoned side kick into a melee fighter
+          </p>
+        </div>
+      </div>
+
+      <div class="mod-option" id="2hs_merc">
+        <div class="col1">
+          <input type="checkbox" /> <!-- checked='true' -->
+        </div>
+        <div class="mod-desc">
+          <p>
+            Enable the 2 axe barbarian hireling.  This hireling can only equip a single one-hand axe, but the damage done will be as if he is holding two of the same axe.<br/>
+            2 axe barbarians will have the word <b style="color:blue">combat</b> below their name when hiring from Qual-Kehk.<br/>
+
+            <img class="mod-screenshot" src='images/2hs_merc.jpg'>
+
+            <p class="bad-data-warning">* Note a bug in the code causes a sword wielding barbarian to be shown after hiring a 2 axe barbarian.</p>
+            <p class="bad-data-warning">You will need to exit and re-enter the game before you can see the correct hireling and equip axes</p>
           </p>
         </div>
       </div>
@@ -433,10 +450,10 @@
 
       <div class="mod-option" id="mob_density">
         <div class="col1">
-          <input type="checkbox" />
+          <input type="checkbox" checked='true' />
         </div>
         <div class="mod-desc">
-          <p>Increases the mob density in normal and nightmare levels: 
+          <p>Increases the mob density: 
           <select id="mob_density_multiplier">
             <option value="1" selected>x 1</option>
             <option value="2">x 2</option>
