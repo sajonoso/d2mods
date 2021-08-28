@@ -39,10 +39,6 @@
     ]
   },
   "add": {
-    "pettype.txt": [
-      "claygolem\t20\t\t0\t1\t\t1\t1\t1\tStrUI0\t1\t3\tearthgolumicon\t289\tearthgolumicon\t\t\t\t\t\t\t0",
-      "bloodgolem\t21\t\t0\t1\t\t1\t1\t1\tStrUI0\t1\t3\tbloodgolumicon\t290\tbloodgolumicon\t\t\t\t\t\t\t0",
-      "firegolem\t22\t\t0\t1\t\t1\t1\t1\tStrUI0\t1\t3\tfiregolumicon\t292\tfiregolumicon\t\t\t\t\t\t\t0"
-    ]
+    "pettype.txt": []
   }
 }
