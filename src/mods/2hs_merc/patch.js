@@ -5,7 +5,7 @@ var mod_2hs_merc = {
     var COLUMN_NAMES = fileLines[0];
     var COLUMNS = COLUMN_NAMES.split('\t');
 
-    var maxID = modder.get_max_column(fileLines, COLUMNS, 'Id')
+    var maxID = modder.get_max_column(fileLines, 'Id')
 
     var INDEX_HIRELING = COLUMNS.indexOf('Hireling')
     var INDEX_SUBTYPE = COLUMNS.indexOf('SubType')

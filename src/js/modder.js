@@ -63,7 +63,8 @@ modder = {
   },
 
   // get the maximum value of a column
-  get_max_column: function (lines, columnNames, column) {
+  get_max_column: function (lines, column) {
+    const columnNames = lines[0].split('\t')
     var INDEX_ID = columnNames.indexOf(column);
 
     var maxID = 0;
@@ -76,6 +77,20 @@ modder = {
     }
 
     return maxID;
+  },
+
+  find_row_value: function(lines, columnName, value) {
+    const columnNames = lines[0].split('\t')
+    const columnIndex = columnNames.indexOf(columnName)
+
+    for (var idx in lines) {
+      if (idx > 0) {
+        const fields = lines[idx].split('\t')
+        if (fields[columnIndex] === value) return idx;
+      }
+    }
+
+    return -1;
   },
 
   replaceColumns: function (originalLine, replaceArray) {
