@@ -19,3 +19,10 @@ Simply run `node build.js`  This will create the single page application under `
 
 ## Usage
 If you simply want to use the d2mod generator, [Click here](https://sajonoso.github.io/d2mods)
+
+## adding new mod
+
+Create folder under `mods` folder and add in the required patch.json and optionally patch.js file.
+add related .txt files under `mods/source_txt`
+add option in index.htm file.
+If mod has options in the index.htm get those options in the file `src\js\modder.js` in the function `getModOptions`

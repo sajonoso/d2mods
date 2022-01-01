@@ -1,0 +1,7 @@
+{
+  "description": "Enable the 2 axe barbarian hireling",
+  "add":  {
+    "hireling.txt": [],
+    "pettype.txt": []
+  }
+}
