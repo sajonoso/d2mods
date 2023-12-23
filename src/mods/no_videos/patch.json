@@ -1,0 +1,7 @@
+{
+  "description": "Disables D2R startup videos",
+  "copy": [
+    { "source": "blizzardlogos.webm", "destination": "mods/diymod/diymod.mpq/data/hd/global/video/blizzardlogos.webm" },
+    { "source": "logoanim.webm", "destination": "mods/diymod/diymod.mpq/data/hd/global/video/logoanim.webm" }
+  ]
+}

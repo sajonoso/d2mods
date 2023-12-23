@@ -1,0 +1,13 @@
+# Rename a copy of this file to .env and set the variables below for your specific environment
+
+if [ "$WINDIR" = "" ]; then
+  # linux or MacOS
+  export DESTINATION=/home/user/games
+  export EXE_7Z=/usr/bin/7z
+  export MSCODE=/home/user/vscode/bin/code
+else
+  # Windows
+  export DESTINATION=/home/user/games
+  export EXE_7Z="/c/Program Files/7-Zip/7z.exe"
+  export MSCODE="/c/Program Files/vscode/bin/code.exe"
+fi

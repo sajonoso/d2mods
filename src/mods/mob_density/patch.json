@@ -1,0 +1,6 @@
+{
+    "description": "Increase Mob density",
+    "add": {
+        "levels.txt": []
+    }
+}

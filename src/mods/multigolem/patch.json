@@ -1,0 +1,11 @@
+{
+    "description":"Allows summoning more than one golem at a time",
+    "search":  {
+      "pettype.txt": [],
+      "skills.txt": []
+    },
+    "add": {
+      "pettype.txt": []
+    }
+  }
+  

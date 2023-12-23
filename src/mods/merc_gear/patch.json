@@ -1,0 +1,30 @@
+{
+  "description": "Allow hirelings to equip one ring and one amulet",
+  "search":  {
+    "inventory.txt": [],
+    "itemtypes.txt": [],
+    "monstats.txt": [
+      {
+        "find": "act5hire1\t560",
+        "replace": "columns",
+        "columns": [
+          { "col": "inventory", "val": "1" }
+        ]
+      },
+      {
+        "find": "act5hire2\t561",
+        "replace": "columns",
+        "columns": [
+          { "col": "inventory", "val": "1" }
+        ]
+      }
+    ]
+  },
+  "d2x-copy": [
+    { "source": "npcinv.dc6", "destination": "data/global/ui/panel/npcinv.dc6" }
+  ],
+  "d2r-copy": [
+    { "source": "hirelinginventorypanel.json", "destination": "mods/diymod/diymod.mpq/data/global/ui/layouts/hirelinginventorypanel.json" },
+    { "source": "hirelinginventorypanelhd.json", "destination": "mods/diymod/diymod.mpq/data/global/ui/layouts/hirelinginventorypanelhd.json" }
+  ]
+}

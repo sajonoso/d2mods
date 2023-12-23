@@ -1,0 +1,71 @@
+{
+  "description": "This patch adds extra items when starting a new character",
+  "description1": "Items added to a new character are: Horadric Cube, a key and a stamina potion",
+  "search":  {
+    "charstats.txt": [
+      {
+        "find": "Amazon\t",
+        "replace": "columns",
+        "columns": [
+          { "col": "item6", "val": "box" }, { "col": "item6count", "val": "1" },
+          { "col": "item7", "val": "key" }, { "col": "item7count", "val": "1" },
+          { "col": "item8", "val": "vps" }, { "col": "item8count", "val": "1" }
+        ]
+      },
+      {
+        "find": "Sorceress\t",
+        "replace": "columns",
+        "columns": [
+          { "col": "item6", "val": "box" }, { "col": "item6count", "val": "1" },
+          { "col": "item7", "val": "key" }, { "col": "item7count", "val": "1" },
+          { "col": "item5", "val": "vps" }, { "col": "item5count", "val": "1" }
+        ]
+      },
+      {
+        "find": "Necromancer\t",
+        "replace": "columns",
+        "columns": [
+          { "col": "item6", "val": "box" }, { "col": "item6count", "val": "1" },
+          { "col": "item7", "val": "key" }, { "col": "item7count", "val": "1" },
+          { "col": "item5", "val": "vps" }, { "col": "item5count", "val": "1" }
+        ]
+      },
+      {
+        "find": "Paladin\t",
+        "replace": "columns",
+        "columns": [
+          { "col": "item6", "val": "box" }, { "col": "item6count", "val": "1" },
+          { "col": "item7", "val": "key" }, { "col": "item7count", "val": "1" },
+          { "col": "item8", "val": "vps" }, { "col": "item8count", "val": "1" }
+        ]
+      },
+      {
+        "find": "Barbarian\t",
+        "replace": "columns",
+        "columns": [
+          { "col": "item6", "val": "box" }, { "col": "item6count", "val": "1" },
+          { "col": "item7", "val": "key" }, { "col": "item7count", "val": "1" },
+          { "col": "item8", "val": "vps" }, { "col": "item8count", "val": "1" }
+        ]
+      },
+      {
+        "find": "Druid\t",
+        "replace": "columns",
+        "columns": [
+          { "col": "item6", "val": "box" }, { "col": "item6count", "val": "1" },
+          { "col": "item7", "val": "key" }, { "col": "item7count", "val": "1" },
+          { "col": "item8", "val": "vps" }, { "col": "item8count", "val": "1" }
+        ]
+      },
+      {
+        "find": "Assassin\t",
+        "replace": "columns",
+        "columns": [
+          { "col": "item6", "val": "box" }, { "col": "item6count", "val": "1" },
+          { "col": "item7", "val": "key" }, { "col": "item7count", "val": "1" },
+          { "col": "item8", "val": "vps" }, { "col": "item8count", "val": "1" }
+        ]
+      }
+    ]
+  }
+}

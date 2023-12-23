@@ -1,0 +1,13 @@
+{
+    "description": "Horadric Cube recipe to add iron golem oskill to a charm",
+    "disabled": [
+      "1 key + 1 stamina potion -> magic dagger (for use with iron golem)\t1\t\t\t0\t\t\t\t\t2\tkey\tvps\t\t\t\t\t\tdir,mag,pre=258,suf=353,sock=1\t\t\t\tatt-skill\t\t106\t60\t6\tdmg-norm\t\t\t60\t62\tswing1\t\t\t150\t150\thp%\t\t\t50\t50\tres-all\t\t\t100\t100\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0",
+      ""
+    ],
+    "add": {
+      "cubemain.txt": [      
+        "1 charm + 1 dagger -> same charm[lvl30](+2 iron golem, +1 golem mastery)\t1\t\t\t0\t\t\t\t\t2\tchar\tknif\t\t\t\t\t\tuseitem\t\t\t\toskill\t\t90\t2\t2\toskill\t\t79\t1\t1\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0"
+      ]
+    }
+  }
+  

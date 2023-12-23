@@ -1,0 +1,50 @@
+{
+  "description": "Enhances the iron golem skill",
+  "disabled-experiments": [
+    { "col": "passivecalc2", "val": "skill('Golem Mastery'.ln56)+skill('IronGolem'.blvl)*skill('IronGolem'.par8)", "desc": "tohit", "original": "skill('Golem Mastery'.ln56)+skill('Clay Golem'.blvl)*skill('Clay Golem'.par8)"},
+    { "col": "passivecalc4", "val": "(1*skill('IronGolem'.par8))", "desc": "damagepercent", "original": "(skill('FireGolem'.blvl)*skill('FireGolem'.par8))"},
+    { "col": "calc1", "val": "skill('Golem Mastery'.ln56)+1*skill('IronGolem'.par8)", "original": "skill('Golem Mastery'.ln56)+skill('Clay Golem'.blvl)*skill('Clay Golem'.par8)"},
+    { "col": "petmax", "val": "1" },
+    { "col": "aurastat3", "val": "maxhp" },
+    { "col": "aurastatcalc3", "val": "stat('maxhp'.accr)" },
+    { "col": "passivestat5", "val": "maxhp" },
+    { "col": "passivecalc5", "val": "stat('maxhp'.accr)" },
+    { "col": "aurastat3", "val": "maxhp" },
+    { "col": "aurastatcalc3", "val": "stat('maxhp'.accr)" },
+    { "col": "srvstfunc", "val": "20", "original": "20" },
+    { "col": "passivecalc4", "val": "(1*skill('IronGolem'.par8))", "original": "(skill('FireGolem'.blvl)*skill('FireGolem'.par8))"},
+    { "col": "passivestat5", "val": "maxhp", "original": "" },
+    { "col": "passivecalc5", "val": "stat('maxhp'.accr)", "original": "" },
+    { "col": "summode", "val": "NU", "original": "S1" },
+    { "col": "cltstfunc", "val": "23", "original": "23" },
+    { "col": "sumumod", "val": "8", "original": "magic resistance" },
+    { "col": "sumskill1", "val": "inner sight" },
+    { "col": "sumsk1calc", "val": "1"},
+    {}
+  ],
+  "search": {
+    "skills.txt": [
+      {
+        "find": "IronGolem\t90",
+        "replace": "columns",
+        "columns": [
+          { "col": "passivecalc2", "val": "skill('Golem Mastery'.ln56)+skill('IronGolem'.blvl)*skill('IronGolem'.par8)", "desc": "tohit", "original": "skill('Golem Mastery'.ln56)+skill('Clay Golem'.blvl)*skill('Clay Golem'.par8)"},
+          { "col": "passivecalc4", "val": "(skill('IronGolem'.blvl)*skill('IronGolem'.par8))", "desc": "damagepercent", "original": "(skill('FireGolem'.blvl)*skill('FireGolem'.par8))"},
+          { "col": "summon", "val": "irongolem", "original": "irongolem" }
+        ]
+      }
+    ],
+    "monstats.txt": [
+      {
+        "description": "Removes the 15 frame attack delay",
+        "find": "irongolem\t291",
+        "replace": "columns",
+        "columns": [
+          { "col": "aidel", "val": "0", "original": "15" },
+          { "col": "aidel(N)", "val": "0", "original": "15" },
+          { "col": "aidel(H)", "val": "0", "original": "15" }
+        ]
+      }
+    ]
+  }
+}

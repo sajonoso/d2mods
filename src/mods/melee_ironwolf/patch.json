@@ -1,0 +1,17 @@
+{
+  "description": "Turns iron wolf into melee fighter",
+  "search": {
+    "monstats.txt": [
+      {
+        "find": "act3hire\t359\tact3hire",
+        "replace": "columns",
+        "columns": [
+          { "col": "aip1", "val": "1", "desc": "aip1" },
+          { "col": "aip1(H)", "val": "1", "desc": "aip1(H)" },
+          { "col": "aip1(N)", "val": "1", "desc": "aip1(N)" },
+          { "col": "isMelee", "val": "1", "desc": "isMelee" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "https://deno.land/std/encoding/base64.ts": "./deno.land/std@0.171.0/encoding/base64.ts",
+    "https://deno.land/": "./deno.land/"
+  }
+}
