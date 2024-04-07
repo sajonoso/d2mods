@@ -4,9 +4,13 @@
     "skills.txt": [],
     "pettype.txt": []
   },
+  "disabled": [
+    "1 charm + 1 spear -> same charm (+15 valkyrie)\t1\t\t\t0\t\t\t\t\t2\tchar\tspea\t\t\t\t\t\tuseitem,rch,qty=255\t\t\t\tcharged\t\t32\t255\t15\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0"
+  ],
   "add": {
     "cubemain.txt": [
-      "1 charm + 1 spear -> same charm (+5 valkyrie)\t1\t\t\t0\t\t\t\t\t2\tchar\tspea\t\t\t\t\t\tuseitem,rch,qty=255\t\t\t\tcharged\t\t32\t255\t5\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0"
+      "1 charm + 1 spear + 1 thawing potion-> same charm (+15 valkyrie)\t1\t\t\t0\t\t\t\t\t3\tchar\tspea\twms\t\t\t\t\tuseitem,rch,qty=255\t\t\t\tcharged\t\t32\t255\t15\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0",
+      "1 charm + 1 spear + 1 stamina potion-> same charm[lvl36](+1 valkyrie)\t1\t\t\t0\t\t\t\t\t3\tchar\tspea\tvps\t\t\t\t\tuseitem\t\t\t\toskill\t\t32\t1\t1\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t0"
     ]
   }
 }

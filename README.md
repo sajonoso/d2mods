@@ -26,3 +26,8 @@ Create folder under `mods` folder and add in the required patch.json and optiona
 add related .txt files under `mods/source_txt` for Diablo 2
 add related .txt files under `mods/source_txt.r` for Diablo 2 Resurrected
 add option in index.html file.
+
+
+## Notes
+
+End of line in .txt files is important.  It is different in d2r and d2x
