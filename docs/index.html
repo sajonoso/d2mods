@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145156556-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-145156556-1');
+  </script> -->
+
+  <meta charset="utf-8">
+
+  <title>Diablo 2 DIY Mod Maker</title>
+  <meta name="title" content="Custom Diablo 2 mod maker">
+  <meta name="description" content="Allows you to choose mods to apply to Diablo 2">
+  <meta name="author" content="sajonoso@users.noreply.github.com">
+  <meta name="keywords"
+    content="Diablo 2,Diablo II,Lord of Destruction,resurrected,mods,diy,expansion pack,extension,addon,enhancement,plugins,custom,game">
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@name": "Diablo 2 DIY custom mod maker",
+      "@url": "https://sajonoso.github.io/d2mods/"
+    }
+  </script>
+
+  <link rel='stylesheet' href='bundled.css'>
+</head>
+
+<body>
+  <div class="page">
+    <div id="title" class="centered">
+      <img id="test" class="test1" src='images/title.png'>
+    </div>
+    <br />
+    <div style="width:100%">
+      <noscript>
+        <h3 class="no-js-warning">Your browser does not support JavaScript!</h3>
+        <h3 class="no-js-warning">This page will not work without javascript enabled</h3>
+      </noscript>
+      <p> Simple steps to create your own mod for Diablo 2 (1.10+) or Diablo 2 Ressurected:</p>
+      <ul>
+        <li>
+          Step 1: Choose your product
+          <select id="mod_target" name="mod_target" onchange="target_onchange(event)">
+            <option value="d2x">Diablo 2 Lord of Destruction</option>
+            <option value="d2r">Diablo 2 Resurrected</option>
+          </select>
+        </li>
+        <li>Step 2: Select the features you want below</li>
+        <li>Step 3: Click on blue button below to download zip file with options chosen</li>
+        <li class="show-d2x">Step 4: Extract zip file into Diablo 2 program folder. (This should add a
+          <b>data</b> folder within the program folder)
+        </li>
+        <li class="show-d2x">Step 5: Start Diablo 2 game with the following options '-direct -txt' passed to shortcut or
+          executable file</li>
+
+        <li class="show-d2r">Step 4: Extract zip file into Diablo 2 Resurrected program folder. (This should add a
+          <b>mod</b> folder within the program folder)
+        </li>
+        <li class="show-d2r">Step 5: Start Diablo 2 Resurrected game with the following options '-mod diymod -txt'
+          passed to shortcut or executable file</li>
+        <li>Enjoy!</li>
+      </ul>
+    </div>
+
+    <p class="bad-data-warning">* Always make a backup of your character before trying out these mods</p>
+
+    <div class="centered">
+      <button class="btn btn-primary" onclick="filedownload_click()">
+        <div class="busy-off">Generate & Download zip file</div>
+        <div class="busy-on">
+          <div class="busy-indicator"></div><span id="counter"></span>
+        </div>
+      </button>
+    </div>
+
+    <br />
+
+    <div class="mod-options">
+      <h3>Select your custom modifications</h3>
+
+      <div class="tabset">
+
+        Sections:
+        <!-- Tab 1 -->
+        <input type="radio" class="tab-input" name="tabset" id="tab1" checked>
+        <label class="tab-label" id="label1" for="tab1">Quality of Life</label>
+        <!-- Tab 2 -->
+        <input type="radio" class="tab-input" name="tabset" id="tab2">
+        <label class="tab-label" id="label2" for="tab2">Enhancements</label>
+        <!-- Tab 3 -->
+        <input type="radio" class="tab-input" name="tabset" id="tab3">
+        <label class="tab-label" id="label3" for="tab3">Performance</label>
+        <!-- Tab 4 -->
+        <input type="radio" class="tab-input" name="tabset" id="tab4">
+        <label class="tab-label" id="label4" for="tab4">Summons/Hirelings</label>
+
+        <div class="tab-panels">
+          <!-- Quality of Life -->
+          <div class="tab-panel p1">
+            <p>
+              Mods to improve game play that does not affect player attributes or skills
+              <br />
+            </p>
+            <!--
+            <div class="mod-option show-d2x" id="i10x6inventory">
+              <div class="col1">
+                <input type="checkbox" />
+              </div>
+              <div class="mod-desc">
+                <p>Increases the inventory size from 10x4 to 10x6</p>
+                <img class="mod-screenshot" src='images/10x6_inventory.jpg'>
+                <p class="bad-data-warning">* Be sure to remove the extra items from the bottom two rows and save your
+                  character before removing this mod to prevent bad data</p>
+              </div>
+            </div>
+-->
+            <div class="mod-option" id="i7x4cube">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Increases the Horadric cube size from 3x4 to 7x4 </p>
+                <p class="bad-data-warning">* Be sure to empty the Horadric cube and save your character before removing
+                  this mod to prevent bad data</p>
+              </div>
+            </div>
+            <!--
+            <div class="mod-option show-d2x" id="i10x8cube">
+              <div class="col1">
+                <input type="checkbox" />
+              </div>
+              <div class="mod-desc">
+                <p>Increases the Horadric cube size from 3x4 to 10x8 </p>
+                <img class="mod-screenshot" src='images/10x8_cube.jpg'>
+                <p class="bad-data-warning">* Be sure to empty the Horadric cube and save your character before removing
+                  this
+                  mod to prevent bad data</p>
+              </div>
+            </div>
+-->
+            <div class="mod-option" id="mob_density">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Increases the mob density:
+                  <select id="mob_density_multiplier">
+                    <option value="1" selected>x 1</option>
+                    <option value="2">x 2</option>
+                    <option value="3">x 3</option>
+                    <option value="4">x 4</option>
+                  </select>
+                </p>
+              </div>
+            </div>
+
+            <div class="mod-option" id="add_start_items">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Add extra items when starting a new character</p>
+                <p>Items added to a new character are: Horadric Cube, a key and a thawing potion</p>
+              </div>
+            </div>
+
+            <div class="mod-option show-d2x" id="i10x10stash_d2x">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Increases the stash size from 6x8 to 10x10</p>
+                <img class="mod-screenshot" src='images/10x10_stash.jpg'>
+                <p class="bad-data-warning">* Be sure to remove the items in the enlarged stash and save your character
+                  before removing this mod to prevent bad data</p>
+              </div>
+            </div>
+
+            <div class="mod-option show-d2x" id="max_arrow_bolt_d2x">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Increases the arrow and bolt quantity to 500 to match D2R update</p>
+              </div>
+            </div>
+
+            <div class="mod-option show-d2x" id="increase_weapon_stack_d2x">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Increases throwing weapon stack size by 50% to match D2R update</p>
+              </div>
+            </div>
+
+            <div class="mod-option show-d2x" id="font_fix_d2x">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Fixes the display of the digit 5</p>
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <!-- Enhancements -->
+          <div class="tab-panel p2">
+            <p>
+              Mods to improve player attributes or skills
+              <br />
+            </p>
+            <div class="mod-option" id="cube_recipes">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Adds extra Horadric Cube recipes. The recipes are:</p>
+                <ul>
+                  <li>1 key + 1 socketed item -> unsocket (keep gems)</li>
+                  <li>1 boots + 1 stamina potion -> same boots +50% walk/run speed</li>
+                  <li>1 key + 1 thawing potion -> Rugged small charm</li>
+                  <li>1 charm + 1 town portal scroll -> same charm (+1 teleport)</li>
+                  <li>1 charm + 1 mana potion -> same charm (+1 all skills)</li>
+                  <li>1 charm + 1 thawing potion -> same charm (+1 corpse explosion)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mod-option" id="item_randomizer">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Adds extra Horadric Cube recipes.</p>
+                <ul>
+                  <li>Convert items to rare type with random statistics</li>
+                  <li>Duplicate items</li>
+                </ul>
+                <p>The recipes are:</p>
+                <ul>
+                  <li>1 weapon + 1 identify Scroll + 1 thawing potion -> rare weapon of same type</li>
+                  <li>1 armour + 1 identify Scroll + 1 thawing potion -> rare armour of same type (also works on rings
+                    and amulets)</li>
+                  <li>1 weapon + 2 health potions -> duplicate item</li>
+                  <li>1 armour + 2 health potions -> duplicate item</li>
+                  <li>1 charm + 2 health potions -> duplicate item</li>
+                </ul>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- Performance -->
+          <div class="tab-panel p3">
+            <p>
+              Mods to improve the performance of the game for low spec devices (for Diablo 2 Resurrected only)
+              <br />
+            <div class="mod-option show-d2r" id="no_videos_d2r">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Turn off introduction videos to improve game load time</p>
+              </div>
+            </div>
+
+
+            <div class="mod-option show-d2r" id="no_weather_d2r">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Turn off rain/snow and mud effects to improve game performance</p>
+              </div>
+            </div>
+
+            <div class="mod-option show-d2r" id="no_3dvfx_d2r">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Turn off some 3D visual effects to improve game performance</br>
+                </p>
+
+              </div>
+            </div>
+            </p>
+          </div>
+
+          <!-- Summons/Hirelings -->
+          <div class="tab-panel p4">
+            <p>
+              Mods that change Hirelings or summoning skills
+              <br />
+            </p>
+<!--
+            <div class="mod-option" id="merc_gear">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Allow hirelings to add extra equipment<br />
+                  <select id="merc_gear_option">
+                    <option value="part" selected>Allow one ring and amulet only</option>
+                    <option value="full">Allow one ring, amulet, belt, boot and gloves</option>
+                  </select>
+                </p>
+                <div>
+                  <img class="mod-screenshot" src='images/merc_gear.jpg'> &nbsp; &nbsp;
+                  <img class="mod-screenshot" src='images/merc_gear_full.jpg'>
+                </div>
+                <p class="bad-data-warning">* Be sure to remove the extra equipment and save your character before
+                  removing this mod to prevent bad data</p>
+              </div>
+            </div>
+-->
+
+            <div class="mod-option" id="merc_gear_full">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Allow hirelings to equip one ring, amulet, belt, boot and gloves</p>
+                <img class="mod-screenshot" src='images/merc_gear_full.jpg'>
+                <p class="bad-data-warning">* Be sure to remove the extra equipment and save your character before
+                  removing this mod to prevent bad data</p>
+              </div>
+            </div>
+
+            <div class="mod-option" id="bear_wolves">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Allows summoning grizzly and wolves at the same time</p>
+                <img class="mod-screenshot" src='images/bear+wolves.jpg'>
+              </div>
+            </div>
+
+            <div class="mod-option" id="multigolem">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Allow summoning more than one golem at a time</p>
+                <img class="mod-screenshot" src='images/multi_golem.jpg'>
+              </div>
+            </div>
+
+            <div class="mod-option" id="multivalkyrie">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Allow summoning more than one Valkyrie. &nbsp; Maximum number: &nbsp;
+                  <select id="multivalkyrie_limit">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="8">8</option>
+                  </select>
+
+                  <br />New cube recipe will be added so you can access this skill if you are not an Amazon
+                </p>
+                <ul>
+                  <li>1 charm + 1 spear + 1 thawing potion-> same charm[255 charges](+15 valkyrie) - can not be increased</li>
+                  <li>1 charm + 1 spear + 1 stamina potion-> same charm[requires level 36](+1 valkyrie) - can be increased with +1 to all skills</li>
+                </ul>
+                <img class="mod-screenshot" src='images/multi_valkyrie.jpg'>
+              </div>
+            </div>
+
+            <div class="mod-option" id="cube_ig">
+              <div class="col1">
+                <input type="checkbox" checked="true" />
+              </div>
+              <div class="mod-desc">
+                <p>
+                  Adds a cube recipe to create a charm which allows any class to summon an Iron Golem<br />
+                  This golem can be buffed with a +1 to all skills
+                </p>
+                <ul>
+
+                  <li>1 charm + 1 dagger + stamina potion -> same charm[lvl30](+1 iron golem, +1 golem mastery) [Resulting charm requires at
+                    least level 30]</li>
+<!--
+                    <li>1 key + 1 stamina potion -> magic dagger (for use as item to create an iron golem that can be an
+                    extra side kick).<br />
+                    This Magic dagger has the following properties which will be transferred to the golem
+                    <ul>
+                      <li>60% chance to cast level 6 zeal on attack</li>
+                      <li>107% increase attack speed</li>
+                      <li>+24%~ enhanced damage</li>
+                      <li>Adds 60-62 damage</li>
+                      <li>+20~ attack rating</li>
+                      <li>6%~ life steal</li>
+                      <li>increase maximum life 50%</li>
+                      <li>All resistances +100</li>
+                      <li>1 socket (Allows further customization)</li>
+                    </ul>
+                  </li>
+-->
+                </ul>
+              </div>
+            </div>
+
+            <div class="mod-option" id="melee_ironwolf">
+              <div class="col1">
+                <input type="checkbox" /> <!-- checked='true' -->
+              </div>
+              <div class="mod-desc">
+                <p>
+                  Turns iron wolf type hireling or summoned side kick into a melee fighter
+                </p>
+              </div>
+            </div>
+
+            <div class="mod-option show-d2x" id="i2hs_merc">
+              <div class="col1">
+                <input type="checkbox" /> <!-- checked='true' -->
+              </div>
+              <div class="mod-desc">
+                <p>
+                  Enable the 2 axe barbarian hireling. This hireling can only equip a single one-hand axe, but the
+                  damage done
+                  will be as if he is holding two of the same axe.<br />
+                  2 axe barbarians will have the word <b style="color:blue">combat</b> below their name when hiring from
+                  Qual-Kehk.<br />
+
+                  <img class="mod-screenshot" src='images/2hs_merc.jpg'>
+
+                <p class="bad-data-warning">* Note a bug in the code causes a sword wielding barbarian to be shown after
+                  hiring a 2 axe barbarian.</p>
+                <p class="bad-data-warning">You will need to exit and re-enter the game before you can see the correct
+                  hireling and equip axes</p>
+                </p>
+              </div>
+            </div>
+
+            <!-- FIRST SIDE KICK -->
+            <div class="mod-option" id="side_kick1">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Replaces an existing skill to summon an extra sidekick for your hero.
+                  <!--
+                  <br />Like the iron golem, you will need to choose a metal item to summon your sidekick.
+                  <br />Your side kick will inherit the properties of the item.
+                  <br />Unlike the iron golem, your sidekick will be lost when you exit the game
+                  <br />(TIP: do not use expensive items when creating your sidekick)
+                  -->
+                  <br />The sidekick will have the following properties: (where clvl = your character level)
+                </p>
+                <ul>
+                  <li><b>Life:</b> Same as character when summoned</li>
+                  <li><b>Defense:</b> Same as character when summoned</li>
+                  <li><b>Attack Rating:</b> Same as character when summoned</li>
+                  <li><b>Item base damage:</b> Same as character active weapon when summoned </li>
+                  <li><b>Natural Resistance:</b> level = clvl / 4 </li>
+                </ul>
+
+                <p>
+                  <b>Choose the skill to replace</b>
+                </p>
+                <div class="tabselector skill">
+                  <input name="sidekick1_skill" type="radio" id="tabskill-1" class="input" value="find potion"
+                    checked="checked" />
+                  <label for="tabskill-1" class="label">
+                    <img src='images/skill_findpotion.jpg'>
+                  </label>
+                  <div class="skill-desc"> Find Potion
+                    <br /> (Barbarian skill)
+                  </div>
+
+                  <input name="sidekick1_skill" type="radio" id="tabskill-2" class="input" value="grim ward" />
+                  <label for="tabskill-2" class="label">
+                    <img src='images/skill_grimward.jpg'>
+                  </label>
+                  <div class="skill-desc"> Grim Ward
+                    <br /> (Barbarian skill)
+                  </div>
+
+                  <input name="sidekick1_skill" type="radio" id="tabskill-3" class="input" value="sacrifice" />
+                  <label for="tabskill-3" class="label">
+                    <img src='images/skill_sacrifice.jpg'>
+                  </label>
+                  <div class="skill-desc"> Sacrifice
+                    <br /> (Paladin skill)
+                  </div>
+                </div>
+
+
+                <p>
+                  <b>Choose your side kick</b>
+                </p>
+                <!-- Purely CSS tabs -->
+                <div class="tabselector type">
+
+                  <input name="sidekick1_type" type="radio" id="tabtype-1" class="input" value="rogue"
+                    checked="checked" />
+                  <label for="tabtype-1" class="label">
+                    <img src='images/icon_rogue.jpg'>
+                  </label>
+                  <div class="panel">
+                    <h4>Rogue features</h4>
+                    <ul>
+                      <li>Inner Sight (Character level / 4)</li>
+                      <li>Crushing Blow 20% chance</li>
+                      <li>Spectral hit (Random elemental damage)</li>
+                    </ul>
+                  </div>
+
+                  <input name="sidekick1_type" type="radio" id="tabtype-2" class="input" value="guard" />
+                  <label for="tabtype-2" class="label">
+                    <img src='images/icon_guard.jpg'>
+                  </label>
+                  <div class="panel">
+                    <h4>Guard features</h4>
+                    <ul>
+                      <li>Jab</li>
+                      <li>Thorns or Sanctuary Aura</li><br/>
+                      (To select, drop on hand gold to zero for Sanctuary before summoning)</li>
+                    </ul>
+                  </div>
+<!--
+                  <input name="sidekick1_type" type="radio" id="tabtype-3" class="input" value="mage" />
+                  <label for="tabtype-3" class="label">
+                    <img src='images/icon_mage.jpg'>
+                  </label>
+                  <div class="panel">
+                    <h4>Mage features</h4>
+                    <ul>
+                      <li>Spectral hit</li>
+                      <li>Sword mastery</li>
+                    </ul>
+                  </div>
+-->
+                  <input name="sidekick1_type" type="radio" id="tabtype-3" class="input" value="barb" />
+                  <label for="tabtype-3" class="label">
+                    <img src='images/icon_barb.jpg'>
+                  </label>
+                  <div class="panel">
+                    <h4>Barbarian features</h4>
+                    <ul>
+                      <li>Sword mastery</li>
+                      <li>Crushing Blow 20% chance</li>
+                    </ul>
+                  </div>
+
+                </div>
+                <!-- Purely CSS tabs -->
+              </div>
+            </div>
+
+            <!-- SECOND SIDE KICK -->
+            <!--
+            <div class="mod-option" id="side_kick2">
+              <div class="col1">
+                <input type="checkbox" checked='true' />
+              </div>
+              <div class="mod-desc">
+                <p>Replaces an existing skill to summon an extra sidekick for your hero.
+                  <br />The sidekick will have the following properties: (where clvl = your character level)
+                </p>
+                <ul>
+                  <li><b>Life:</b> Character life x 2</li>
+                  <li><b>Defense:</b> increases with character defense level</li>
+                  <li><b>Attack Rating:</b> increases with character attack rating</li>
+                  <li><b>Item normal damage:</b> Maximum damage of non missile weapon currently used</li>
+                  <li><b>Crushing blow:</b> 25% chance</li>
+                  <li><b>Natural Resistance (max level 20):</b> level = 1+(clvl/3)</li>
+                  <li><b>Increased speed:</b> level 1</li>
+                </ul>
+
+                <p>
+                  <b>Choose the skill to replace</b>
+                </p>
+                <div class="tabselector skill">
+                  <input name="sidekick2_skill" type="radio" id="tabskill-1b" class="input" value="findpotion" />
+                  <label for="tabskill-1b" class="label">
+                    <img src='images/skill_findpotion.jpg'>
+                  </label>
+                  <div class="skill-desc"> Find Potion
+                    <br /> (Barbarian skill)
+                  </div>
+
+                  <input name="sidekick2_skill" type="radio" id="tabskill-2b" class="input" value="grimward"
+                    checked="checked" />
+                  <label for="tabskill-2b" class="label">
+                    <img src='images/skill_grimward.jpg'>
+                  </label>
+                  <div class="skill-desc"> Grim Ward
+                    <br /> (Barbarian skill)
+                  </div>
+
+                  <input name="sidekick2_skill" type="radio" id="tabskill-3b" class="input" value="sacrifice" />
+                  <label for="tabskill-3b" class="label">
+                    <img src='images/skill_sacrifice.jpg'>
+                  </label>
+                  <div class="skill-desc"> Sacrifice
+                    <br /> (Paladin skill)
+                  </div>
+                </div>
+
+
+                <p>
+                  <b>Choose your second side kick</b>
+                </p>
+
+                <div class="tabselector type">
+                  <input name="sidekick2_type" type="radio" id="tabtype-1b" class="input" value="barb" />
+                  <label for="tabtype-1b" class="label">
+                    <img src='images/icon_barb.jpg'>
+                  </label>
+                  <div class="panel">
+                    <h4>Barbarian features</h4>
+                    <ul>
+                      <li>Life steal</li>
+                      <li>Sword mastery level 1</li>
+                      <li style="visibility:hidden"></li>
+                    </ul>
+                  </div>
+
+                  <input name="sidekick2_type" type="radio" id="tabtype-2b" class="input" value="guard" />
+                  <label for="tabtype-2b" class="label">
+                    <img src='images/icon_guard.jpg'>
+                  </label>
+                  <div class="panel">
+                    <h4>Guard features</h4>
+                    <ul>
+                      <li>Faster attack rate</li>
+                      <li>Level 6 Jab</li>
+                      <li>Level 1 Sanctuary Aura</li>
+                    </ul>
+                  </div>
+
+                  <input name="sidekick2_type" type="radio" id="tabtype-3b" class="input" value="rogue" />
+                  <label for="tabtype-3b" class="label">
+                    <img src='images/icon_rogue.jpg'>
+                  </label>
+                  <div class="panel">
+                    <h4>Rogue features</h4>
+                    <ul>
+                      <li>Faster attack rate</li>
+                      <li>Level 1 Pierce</li>
+                      <li>Shoots multiple arrows (Multishot)</li>
+                    </ul>
+                  </div>
+
+                  <input name="sidekick2_type" type="radio" id="tabtype-4b" class="input" value="mage"
+                    checked="checked" />
+                  <label for="tabtype-4b" class="label">
+                    <img src='images/icon_mage.jpg'>
+                  </label>
+                  <div class="panel">
+                    <h4>Mage features</h4>
+                    <ul>
+                      <li>Faster attack rate</li>
+                      <li>Spectral hit</li>
+                      <li>Sword mastery level 1</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            -->
+
+          </div>
+
+        </div>
+
+      </div> <!-- END tabset -->
+    </div> <!-- END mod-options -->
+
+    <!-- Footer -->
+    <p></p>
+    <p></p>
+
+    <div>
+      &copy; 2019 <a href="https://github.com/sajonoso" target="_blank">Sajon Oso</a> - version 3.0
+    </div>
+  </div>
+
+  <!-- <script src='js/polyfills.js'></script>
+  <script src='libs/jszip.min.js'></script>
+  <script src='libs/FileSaver.min.js'></script>
+  <script src='mods.zip.js'></script>
+  <script src='js/modder.js'></script>
+  <script src='js/main.js'></script> -->
+
+  <script src='bundled.js'></script>
+</body>
+
+</html>

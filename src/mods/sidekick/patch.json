@@ -1,0 +1,12 @@
+{
+  "description": "Alter the grim ward spell to summon a new minion",
+  "search": {
+    "skills.txt": [],
+    "skilldesc.txt": [],
+    "charstats.txt": [],
+    "monstats.txt": []
+  },
+  "add": {
+    "pettype.txt": []
+  }
+}

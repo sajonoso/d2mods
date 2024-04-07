@@ -1,0 +1,17 @@
+{
+  "description": "Increases arrow and bolt stack to 500",
+  "search": {
+    "misc.txt": [
+      {
+        "find": "Arrows\tArrows",
+        "replace": "columns",
+        "columns": [{ "col": "maxstack", "val": "500", "desc": "default: 350" }]
+      },
+      {
+        "find": "Bolts\tBolts",
+        "replace": "columns",
+        "columns": [{ "col": "maxstack", "val": "500", "desc": "default: 250" }]
+      }
+    ]
+  }
+}

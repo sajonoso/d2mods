@@ -8,6 +8,7 @@
     { "source": "npcinv.dc6", "destination": "data/global/ui/panel/npcinv.dc6" }
   ],
   "d2r-copy": [
+    { "source": "npcinv.dc6", "destination": "mods/diymod/diymod.mpq/data/global/ui/panel/npcinv.dc6" },
     { "source": "hirelingpanel.sprite", "destination": "mods/diymod/diymod.mpq/data/hd/global/ui/panel/hireling/hirelingpanel.sprite" },
     { "source": "hirelinginventorypanel.json", "destination": "mods/diymod/diymod.mpq/data/global/ui/layouts/hirelinginventorypanel.json" },
     { "source": "hirelinginventorypanelhd.json", "destination": "mods/diymod/diymod.mpq/data/global/ui/layouts/hirelinginventorypanelhd.json" }

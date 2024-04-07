@@ -1,0 +1,6 @@
+{
+  "description": "Increases weapon stack size by 50% to match D2R 2.4 PTR",
+  "search": {
+    "weapons.txt": []
+  }
+}
