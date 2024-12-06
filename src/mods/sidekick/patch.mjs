@@ -21,6 +21,7 @@ const commonProps = {
   'passivestat4': '',
   'passivecalc4': '',
 
+  'aurastate': 'stamina', // see options in states.txt file
   'aurastat1': 'tohit',
   'aurastatcalc1': summonProps.attack,
   'aurastat2': 'item_normaldamage',

@@ -40,7 +40,7 @@ const COMMON_MOD_OPTIONS = [
   {
     "name": "mob_density",
     "options": {
-      "multiplier": "2",
+      "multiplier": "1",
     }
   },
   {
